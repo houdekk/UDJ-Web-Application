@@ -1,0 +1,106 @@
+body{
+	font-family:sans-serif;
+	font-size:12px;
+}
+p{
+	margin:0px;
+}
+#signature{
+	text-align:center;
+	margin-top:20px;
+	color:#cccccc;
+}
+#udj_app{
+	margin: auto;
+	width: 600px;
+	border:1px solid #000000;
+	overflow:hidden;
+
+
+  	-moz-box-shadow:    1px 1px 10px 1px #000;
+  	-webkit-box-shadow: 1px 1px 10px 1px #000;
+	box-shadow:         1px 1px 10px 1px #000;
+}
+
+#container_right {
+    float:left;
+    width:100%;
+    background:#d0d0d0;
+    overflow:hidden;
+    position:relative;
+}
+#container_middle {
+    float:left;
+    width:100%;
+    background:#eeeeee;
+    position:relative;
+    right:30%;
+}
+#container_left {
+    float:left;
+    width:100%;
+    background:#d0d0d0;
+    position:relative;
+    right:40%;
+}
+#event_box {
+    float:left;
+    width:26%;
+    position:relative;
+    left:72%;
+    overflow:hidden;
+}
+#song_box {
+    float:left;
+    width:36%;
+    position:relative;
+    left:76%;
+    overflow:hidden;
+}
+#library_box {
+    float:left;
+    width:26%;
+    position:relative;
+    left:80%;
+    overflow:hidden;
+}
+
+.upvote{
+	width:40px;
+	background:#FFCC00;
+	border: 1px solid #000000;
+}
+.upvote:active{
+	background:#FF9900;
+}
+.downvote{
+	width:40px;
+	background:#00CCFF;
+	border: 1px solid #000000;
+
+}
+.downvote:active{
+	background:#0099FF;
+}
+
+.add_song{
+	width:80px;
+	background:#FFCC00;
+	border: 1px solid #000000;
+}
+
+.add_song:active{
+	background:#FF9900;
+}
+
+.song_name{
+	border-top:1px solid #bbbbbb;
+}
+.song_name:nth-child(odd){
+	background:#dddddd;
+
+}
+
+#now_playing{
+	border-bottom:1px solid #bbbbbb;
+}
