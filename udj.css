@@ -69,6 +69,9 @@ p{
 	width:40px;
 	background:#FFCC00;
 	border: 1px solid #000000;
+    position: absolute;
+    right: 50px;
+
 }
 .upvote:active{
 	background:#FF9900;
@@ -78,6 +81,8 @@ p{
 	background:#00CCFF;
 	border: 1px solid #000000;
 
+    position: absolute;
+    right: 0px;
 }
 .downvote:active{
 	background:#0099FF;
@@ -87,6 +92,8 @@ p{
 	width:80px;
 	background:#FFCC00;
 	border: 1px solid #000000;
+    position:absolute;
+    right:0px;
 }
 
 .add_song:active{
@@ -95,6 +102,7 @@ p{
 
 .song_name{
 	border-top:1px solid #bbbbbb;
+    height: 24px;
 }
 .song_name:nth-child(odd){
 	background:#dddddd;
