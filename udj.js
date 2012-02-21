@@ -125,7 +125,7 @@ $(function(){
 
 	$.post(
 		"https://udjevents.com//udj/auth",
-		{ username: "kurt", password: "testkurt" },
+		{ username: "kurt", password: "" },
 		function(data){
 			alert("Got response" + data);
 		}
