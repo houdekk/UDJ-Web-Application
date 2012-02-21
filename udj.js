@@ -63,6 +63,17 @@ $(function(){
 		model: ActivePlaylistEntry
 	});
 
+	//Individual Views:
+
+	SongView = Backbone.View.extend({
+		el: $('#udj_app'),
+
+		initialize: function(){
+			$("#now_playing").append("<div class='song_name'><p>"+playlist.at(0).get('title')+"<input type='button' class='upvote' value='Up'/><input type='button' class='downvote' value='Down'/></p></div>");
+
+		}
+	});
+
 	var psong1 = new ActivePlaylistEntry({title:'Jambi'});
 	var psong2 = new ActivePlaylistEntry({title:'Rosetta Stoned'});
 	var psong3 = new ActivePlaylistEntry({title:'The Pot'});
@@ -88,7 +99,7 @@ $(function(){
 
 		render: function(){
 			//update now playing
-			$("#now_playing").append("<div class='song_name'><p>"+playlist.at(0).get('title')+"<input type='button' class='upvote' value='Up'/><input type='button' class='downvote' value='Down'/></p></div>");
+			var nowPlaying = new SongView();
 			//display playlist
 			for(var i=1; i< playlist.length;i++){
 				$("#song_box").append("<div class='song_name'><p>"+playlist.at(i).get('title')+"<input type='button' class='upvote' value='Up'/><input type='button' class='downvote' value='Down'/></p></div>");
@@ -97,7 +108,7 @@ $(function(){
 			//display library
 			for(var j=0; j< library.length;j++){
 				$("#library_box").append("<div class='song_name'><p>"+library.at(j).get('title')+"<input type='button' class='add_song' value='Add Song'/></p></div>");
-			}	
+			}
 		},
 
 		//this function is used to add event for TESTING.
@@ -107,10 +118,18 @@ $(function(){
 			var event = new Event({name:input});
 		}
 
-
 	});
 
 	var app = new AppView;
 
+
+	$.post(
+		"https://udjevents.com//udj/auth",
+		{ username: "kurt", password: "testkurt" },
+		function(data){
+			alert("Got response" + data);
+		}
+	).error(function(){alert ("Error");
+	});
 });
 
